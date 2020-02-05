@@ -1,0 +1,262 @@
+$content-width:1200px; //内容宽度
+$mobile-width:90%;//手机模式的内容宽度
+$main-color:rgba(214,185,120,1);//主题色
+.home{
+  width: 100%;
+  .content{
+    width: 100%;
+    min-width: 1200px;
+    @media only screen and (max-width: 768px) {
+      min-width: 320px;
+    }
+    padding: 0;
+    font-weight: 600;
+    .carouse-img{
+      height: inherit;
+    }
+    .preferred,.touring,.about-us,.concat-us,.incubation{
+      padding: 50px 0px;
+      position: relative;
+    }
+    #preferred,#touring,#about-us,#concat-us,#incubation{
+      height: 30px;
+      position: absolute;top: -80px;
+    }
+    //100优项--start---
+    .preferred{
+      width: $content-width;
+      margin: 0 auto;
+      @media only screen and (max-width: 768px) {
+        width: $mobile-width;
+      }
+      .preferred-con{
+        width: 100%;
+        .pre-left,.pre-right{
+          height: 300px;
+        }
+        .pre-right{
+          width: 49%;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
+          img{
+            height: 94%;
+            @media only screen and (max-width: 768px) {
+              height: 80%;
+            }
+          }
+        }
+        .pre-left{
+          width: 49%;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
+          .l-1,.l-2,.l-3{
+            width: 90%;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .l-1{
+            font-size:1rem;
+            font-weight:500;
+            color:$main-color;
+            padding-left: 10px;
+            border-left: 4px solid $main-color;
+          }
+          .l-2{
+            font-size:0.875rem;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+          }
+        }
+      }
+    }
+    //全球巡演--start--
+    .touring{
+      width: 100%;
+      .touring-con{
+        width:  $content-width;
+        margin: 0 auto;
+        .touring-con-title{
+          .touring-info{
+            width: 85%;
+            margin: 5px auto;
+            font-size:0.875rem;
+            line-height: 1.5rem;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+          }
+        }
+        @media only screen and (max-width: 768px) {
+          width: $mobile-width;
+          text-align: left;
+        }
+        .touring-con-img{
+          margin: 30px 0px;
+          .t-con{
+            width: 30%;
+            @media only screen and (max-width: 768px) {
+              width: $mobile-width;
+            }
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    //孵化包
+    .incubation{
+      width: 100%;
+      background-color: #F5F5F5;
+      .incubation-con{
+        width: $content-width;
+        @media only screen and (max-width: 768px) {
+          width: $mobile-width;
+        }
+        margin: 0 auto;
+        .con-img{
+          margin: 15px 0px;
+          width: 33.3%;
+          min-width: 200px;
+          img{
+            width: 25%;
+          }
+        }
+        .con-title{
+          margin:10px auto;
+          width: 78%;
+          @media only screen and (max-width: 768px) {
+            width: $mobile-width;
+          }
+          font-size:1rem;
+          font-weight:500;
+          color:rgba(27,28,30,1);
+          line-height:22px;
+        }
+      }
+    }
+    //关于我们
+    .about-us{
+      width: 100%;
+      background: url("../img/ho_bg_about.png") no-repeat;
+      .aboutUs-con{
+        @media only screen and (max-width: 768px) {
+          width: $mobile-width;
+          text-align: left;
+        }
+        width:37% ;
+        margin: 0 auto;
+        font-size:0.875rem;
+        line-height: 1.5rem;
+        font-weight:400;
+        color:rgba(214,185,120,1);
+      }
+    }
+    .concat{
+      width: 100%;
+      margin-top: 60px;
+      .concat-con{
+        width: $content-width;
+        @media only screen and (max-width: 768px) {
+          width: $mobile-width;
+        }
+        margin: 15px auto;
+        .concat-con-img{
+          width: 20%;
+          @media only screen and (max-width: 768px) {
+            width: 50%;
+          }
+          img{
+            width: 90%;
+          }
+        }
+        .concat-con-img-suport{
+          width: 8.3%;
+          @media only screen and (max-width: 768px) {
+            width: 25%;
+          }
+          img{
+            width: 90%;
+          }
+        }
+      }
+    }
+    .concat-us{
+      width: 100%;
+      background-color: #F5F5F5;
+      .concat-us-con{
+        width: $content-width;
+        @media only screen and (max-width: 768px) {
+          width: $mobile-width;
+        }
+        margin: 0 auto;
+        .c-s-con{
+          width: 33%;
+          @media only screen and (max-width: 768px) {
+            width: $mobile-width;
+          }
+          min-width: 180px;
+          margin: 15px 0px;
+          .concat-img {
+            width: 30%;
+            img{
+              width: 30%;
+            }
+          }
+          .concat-titles{
+            font-size:1.125rem;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:25px;
+            margin: 5px;
+          }
+          .concat-value{
+            font-size:0.875rem;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:20px;
+          }
+        }
+      }
+    }
+  }
+  //每一个模块的title
+  .titles{
+    width: 100%;
+    margin-bottom: 25px;
+    div{
+      width: 100%;
+    }
+    .titles-con1{
+      font-size:1.5rem;
+      font-weight:600;
+      color:rgba(51,51,51,1);
+      margin:8px 0px;
+    }
+    .titles-con2{
+      font-size:1rem;
+      font-weight:600;
+      color:$main-color;
+    }
+  }
+  //查看更多按钮
+  .more-btn{
+    width:120px;
+    height:34px;
+    background:rgba(27,28,30,1);
+    color:$main-color;
+    font-size:0.875rem;
+    cursor: pointer;
+  }
+  //分隔符
+  .split{
+    margin: 15px 0px;
+    color:$main-color;
+    font-size:1.125rem;
+    span{
+      margin: 0 5px;
+    }
+  }
+}
+

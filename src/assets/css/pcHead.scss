@@ -1,0 +1,95 @@
+$content-width:1200px; //内容宽度
+$mobile-width:90%;//手机模式的内容宽度
+$main-color:rgba(214,185,120,1);//主题色
+.head{
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  width: 100%;
+  height: 80px;
+  background:rgba(27,28,30);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 1px 0px;
+  .head-content{
+    width: $content-width;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+      width: $mobile-width;
+    }
+    .con-right{
+      width: 80%;
+      @media only screen and (max-width: 768px) {
+        display: none;
+        font-size: 0.5rem;
+      }
+    }
+    .con-left{
+      width: 20%;
+      img{
+        height: 52px;
+      }
+    }
+  }
+  .item{
+    margin-left: 5%;
+    height: 75px;
+    cursor: pointer;
+    border-bottom: 4px solid rgba(27,28,30,0);
+  }
+  .item-check{
+    margin-left: 5%;
+    height: 75px;
+    cursor: pointer;
+    color: $main-color;
+    border-bottom: 4px solid $main-color;
+  }
+  .showDraw{
+    display: none;
+    font-size: 2rem;
+    color: $main-color;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+  .head-mobile{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    .content{
+      width: 30vw;
+      height: 100vh;
+      background-color: white;
+      .closedia{
+        width: 80%;
+        height: 40px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+      }
+    }
+    background-color: rgba(0,0,0,0.5);
+    font-size: 0.9em;
+    div{
+      height: 80px;
+    }
+  }
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}

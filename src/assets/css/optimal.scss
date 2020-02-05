@@ -1,0 +1,61 @@
+$content-width:1200px; //内容宽度
+$main-color:rgba(214,185,120,1);//主题色
+$mobile-width:90%;//手机模式的内容宽度
+.content{
+  min-height: calc(100vh - 195px);
+  min-width: 1200px;
+  @media only screen and (max-width: 768px) {
+    min-width: 320px;
+  }
+  width: 100%;
+  margin-top: 60px;
+  background:rgba(245,245,245,1);
+  padding-bottom: 15px;
+  .clear{
+    height: 15px;
+  }
+  .content-list{
+    width: $content-width;
+    @media only screen and (max-width: 768px) {
+      width: $mobile-width;
+    }
+    min-height: 620px;
+    margin: 15px auto;
+    background-color: #ffffff;
+    .phone{
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    .pc{
+      margin: 15px auto;
+      display: block;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .page{
+    margin: 0 auto;
+    display: block;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .page2{
+    display: none;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+}
+.total{
+  height:20px;
+  width: 50%;
+  margin: 0 auto;
+  background:rgba(27,28,30,1);
+  border-radius:10px;
+  color: #D6B978 !important;
+}

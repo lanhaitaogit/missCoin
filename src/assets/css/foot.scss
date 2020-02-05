@@ -1,0 +1,43 @@
+.pc-footer{
+  height:60px;
+  background:rgba(18,18,18,1);
+  min-width: 1200px;
+  @media only screen and (max-width: 768px) {
+    min-width: 320px;
+
+  }
+  .info{
+    font-size:0.9rem;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:20px;
+    span{
+      margin:0px 5px;
+    }
+  }
+}
+.pc-concat{
+  min-height:60px;
+  background:#1B1C1E;
+  min-width: 1200px;
+  @media only screen and (max-width: 768px) {
+    min-width: 320px;
+
+  }
+  .info{
+    font-size:0.875rem;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:20px;
+    div{
+      margin:0px 15px;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin:5px auto;
+      }
+    }
+    .text-concat{
+      color: #D6B978;
+    }
+  }
+}
