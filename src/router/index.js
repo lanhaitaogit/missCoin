@@ -5,6 +5,7 @@ import optimal from '../views/optimal.vue'
 import optimalInfo from '../views/optimal-info.vue'
 import subProject from '../views/subProject.vue'
 import tour from '../views/tour.vue'
+import incubator from '../views/incubator'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ const routes = [
     path: '/tour',
     name: 'tour',
     component: tour
+  },{
+    path: '/incubator',
+    name: 'incubator',
+    component: incubator
   }
 ]
 

@@ -1,5 +1,8 @@
 <style scoped src="../assets/css/home.scss" lang="scss"></style>
 <style lang="scss">
+  html{
+    overflow-y: auto;//修复轮播锁滚动条
+  }
   .el-carousel__item h3 {
     color: #475669;
     font-size: 14px;
