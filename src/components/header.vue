@@ -7,7 +7,7 @@
           <img src="../assets/img/logo.png" @click="jump(0)">
         </div>
         <div class="con-right r-r-l">
-          <div class="item c-c-c" :class="[indexTab=== 0?'item-check':'item']" @click="jump(0)">{{$t('首页')}}</div>
+          <div class="item c-c-c" :class="[indexTab=== 0?'item-check':'item']" @click="jump(0)">首页</div>
           <div class="item c-c-c" :class="[indexTab=== 1?'item-check':'item']" @click="jump(1)">百币榜单</div>
           <div class="item c-c-c" :class="[indexTab=== 3?'item-check':'item']" @click="jump(3)">项目孵化营</div>
           <div class="item c-c-c" :class="[indexTab=== 2?'item-check':'item']" @click="jump(2)">服务商招募</div>

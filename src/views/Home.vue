@@ -57,20 +57,11 @@
       <div class="preferred">
         <div id="preferred"></div>
         <div class="titles c-c-c">
-          <div class="titles-con1">100优项</div>
-          <div class="titles-con2">optimal</div>
         </div>
         <div class="preferred-con r-s-a">
           <div class="pre-left c-c-c">
-            <div class="l-1 r-l-c">100优项评价标准</div>
-            <div class="l-2">我搭台你唱戏，入驻平台的项目将在开发代码提交活跃、客户时长及
-              收益规模等6个纬度进行展示和竞争，实时评选出前100名优质项目，
-              让更值得被关注和信赖的项目浮出水面！
-            </div>
-            <div class="l-3 r-l-c">
-              <div class=" more-btn c-c-c" @click="goOptimal()">
-                查看详情
-              </div>
+            <div class="l-1 r-l-c">百币榜单</div>
+            <div class="l-2">通过对目前市场表现活跃的新老项目的综合评估，优选100个区块链项目构成百币榜单。百币榜单优胜劣汰，随着市场选择动态更新。
             </div>
           </div>
           <div class="pre-right">
@@ -80,12 +71,17 @@
       </div>
       <div class="incubation">
         <div id="incubation"></div>
-        <div class="titles c-c-c">
-          <div class="titles-con1">孵化包</div>
-          <div class="titles-con2">incubator</div>
+        <div class="content">
+          <div class="titles c-c-c">
+            <div class="titles-con1">项目孵化营</div>
+            <div class="l-1 r-l-c">孵化包</div>
+            <div class="r-l-c">Miss coin围绕百币榜单为项目提供以下十大服务
+              <!--<span class="details" @click="jump(7)">详情</span>-->
+            </div>
+          </div>
         </div>
         <div class="incubation-con r-s-a warp">
-          <div v-for="(icb,index) in icbList" :key="index" class="con-img">
+          <div v-for="(icb,index) in icbList" :key="index" class="con-img" @click="jump(icbIndex)">
             <img :src="require('../assets/img/incubator/' + icb.name)">
             <div class="con-title">{{icb.title}}</div>
           </div>
@@ -93,46 +89,144 @@
       </div>
       <div class="touring">
         <div id="touring"></div>
-        <div class="titles c-c-c">
-          <div class="titles-con1">全球巡演</div>
-          <div class="titles-con2">tour</div>
+        <div class="content">
+          <div class="pre-left">
+            <div class="l-1 r-l-c">全球服务商招募</div>
+            <!--<div class="titles-con2">recruitment</div>-->
+            <div class="l-2">
+              寻找行业内顶尖服务提供商，为Miss Coin旗下“百币榜单”内的项目提供专项收益服务。
+            </div>
+            <div class="enter" @click="jump(6)">全球服务商招募报名入口</div>
+            <div class="exa" @click="jump(7)">
+              优秀服务商案例点击详情
+            </div>
+          </div>
         </div>
-        <div class="touring-con c-c-c">
-          <div class="touring-con-title">
-            <div class="touring-info">
-              Miss Coin将从媒体、评级机构、投行、社群等各个方面给项目提供助力。Miss Coin全球巡演计划也已
-              经启动，每年2次千人峰会（2020年的定在首尔和柏林），12次百人活动。通过峰会活动，让优质项目方之间互相交流，互相学习，在应
-              用层面得到提升；让项目获取资本市场更大的关注，行成市场新的热点；也能化解某一个国家市场监管政策对优质项目社区信心造成的打击和压力。
+        <div class="pre-right"> </div>
+      </div>
+      <div class="flow">
+        <div id="flow"></div>
+        <div class="titles">
+          <div class="titles-con1">流量池</div>
+        </div>
+        <div class="flow-con">
+          <div class="flow-con1">
+            <div class="titles-con1 l-1">Mr.game 游戏中心</div>
+            <div>Mr.game游戏中心会开发自己的特色游戏供人玩耍；也欢迎更多游戏商家入驻Mr.game游戏中心，给用户带来更多玩法。</div>
+            <div class="fbi-content1">
+                <div class="fbi-warning1">
+                  <div class="logo">Tokencan</div>
+                    <span class="titles">Mr.game游戏中心</span>
+                    <div class="wire-con1 wire">
+                      <div  class="wire-sub1">
+                        <span class="wire1" style="margin-left: 18px;">游戏消费</span>
+                        <span class="wire1" style="margin-right: -10px;">游戏充值通道</span>
+                      </div>
+                    </div>
+                  <div class="wire-con2">
+                    <div class="wore-sub2 wire">
+                      <span class="wire2" style="margin-left: -40px;">游戏上架</span>
+                      <span class="wire2" style="margin-right: -30px;">泡沫消除</span>
+                    </div>
+                    <div class="wore-sub2 wire">
+                      <span class="wire2" style="margin-left: -52px;">游戏平台币充值</span>
+                      <span class="wire2" style="margin-right: -40px;">法币充值</span>
+                    </div>
+                  </div>
+                  <div class="wire-sub3">
+                    <div class="wire3 wire">外部流量引入</div>
+                  </div>
+                  <div class="wire-con3">
+                    <div class="wire4 wire" style="margin-left: -40px;">渠道分发</div>
+                    <div class="wire4 wire" style="margin-right: -40px;">游戏平台</div>
+                  </div>
+                </div>
             </div>
           </div>
-          <div class="touring-con-img r-s-a warp">
-            <div class="t-con">
-              <img src="../assets/img/tour/tour1.png">
-            </div>
-            <div class="t-con">
-              <img src="../assets/img/tour/tour1.png">
-            </div>
-            <div class="t-con">
-              <img src="../assets/img/tour/tour1.png">
+          <div class="flow-con1">
+            <div class="titles-con1 l-1">支付</div>
+            <div>与各国法币对应的数字货币及其他支付系统对接，实现一个系统所有支付数字货币的打通，线下可使用。</div>
+            <div class="fbi-content2">
+              <div class="fbi-warning2">
+                <div class="bank">银行</div>
+                <div class="logo">Tokencan</div>
+                <div class="wire-sub1">
+                  <div class="titles">AIPP支付中央结算系统</div>
+                  <div class="wire-con1 wire">
+                    <div class="wire-sub2">
+                      <span class="wire1" style="margin-left: 18px;">储值卡</span>
+                      <span class="wire1" style="margin-right: -10px;">ARA积分</span>
+                    </div>
+                  </div>
+                  <div class="wire-con2 wire">
+                    <div class="wire-sub3">
+                      <span class="wire2 wire" style="margin-left: 18px;">项目公司</span>
+                      <span class="wire2 wire" style="">旅游公司</span>
+                      <span class="wire2 wire" style="">直销公司</span>
+                    </div>
+                  </div>
+                  <div class="wire3 wire">AIPP云支付</div>
+                </div>
+              </div>
+              <div class="list">
+                <div><span class="check-item"></span>与韩国法定数字货币对接</div>
+                <div><span class="check-item"></span>与中国法定数字DCEP对接</div>
+                <div><span class="check-item"></span>与Libra对接</div>
+                <div><span class="check-item"></span>与各种主链及侧脸链实现跨链支付对接</div>
+                <div><span class="check-item"></span>与其他支付系统对接</div>
+              </div>
             </div>
           </div>
-          <div class=" more-btn c-c-c" @click="jump(6)">
-            查看更多
+          <div class="flow-con1">
+            <div class="titles-con1 l-1">羊票</div>
+            <div>与普通群众生活相关，区块链融入百姓生活的真实落地案例。</div>
+            <div class="fbi-content3">
+              <div class="fbi-warning3">
+                <div class="logo">Tokencan</div>
+                <div class="wire-sub1">
+                  <div class="titles">羊票：大司农社区</div>
+                  <div class="wire-con1 wire">
+                    <div class="wire-sub2">
+                      <span class="wire1" style="margin-left: 18px;">农产品生产端</span>
+                      <span class="wire1" style="margin-right: -10px;">农产品消费端</span>
+                    </div>
+                  </div>
+                  <div class="wire-con2 wire">
+                    <div class="wire-sub3">
+                      <span class="wire2 wire" style="margin-left: 18px;">即插即用</span>
+                      <span class="wire2 wire" style="">合规合法</span>
+                      <span class="wire2 wire" style="">扫码转账</span>
+                    </div>
+                  </div>
+                  <div class="wire3 wire">免费吃羊肉</div>
+                </div>
+              </div>
+              <div class="list">
+                <div><span class="check-item"></span>羊票是养羊的免费红利</div>
+                <div><span class="check-item"></span>一克羊肉对应一枚羊票（NRC）</div>
+                <div><span class="check-item"></span>认购一只羊一个月可分得750克羊肉</div>
+                <div><span class="check-item"></span>羊票在Tokencan交易所交易</div>
+                <div><span class="check-item"></span>买羊票可以换到更便宜更高品质的羊肉</div>
+                <div><span class="check-item"></span>这个模式会大大的促进订单农业的发展</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="about-us">
         <div id="about-us"></div>
         <div class="titles c-c-c">
           <div class="titles-con1" style="color: #D6B978">关于我们</div>
-          <div class="titles-con2">About us</div>
+          <!--<div class="titles-con2">About Miss Coin</div>-->
         </div>
         <div class="aboutUs-con">
-          MISS COIN是由全球领先的各区块链机构共同发起的全球优质项目的一个自我展示平台，通过让区块链项目以及产业在一起，形成势能产生共振，共同来推动区块链产业和项目的应用落地和国际的进程。
+          一站式项目孵化营+流量池
         </div>
       </div>
-      <div class="concat" id="concat">
+      <div class="road">
+        <img src="../assets/img/intro/131580458483_.pic_hd.jpg">
+      </div>
+      <div class="concat" id="concat" style="display: none">
         <div class="split">
           <span>—</span>
           <span>发起机构</span>
@@ -147,7 +241,7 @@
       <div class="concat-us">
         <div class="titles c-c-c">
           <div class="titles-con1">联系我们</div>
-          <div class="titles-con2">Contact us</div>
+          <!--<div class="titles-con2">Contact us</div>-->
         </div>
         <div class="concat-us-con r-s-a warp">
           <div class="c-s-con c-c-c">
@@ -158,13 +252,13 @@
           <div class="c-s-con c-c-c">
             <div class="concat-img"><img src="../assets/img/concat-us/ho_ic_cont_email.png"></div>
             <div class="concat-titles">Email</div>
-            <div class="concat-value">tokencan@tokencan.com</div>
+            <a class="concat-value" href="mailto:tokencan@tokencan.com">tokencan@tokencan.com</a>
           </div>
           <div class="c-s-con c-c-c">
             <div class="concat-img"><img src="../assets/img/concat-us/ho_ic_cont_tel.png"></div>
             <div class="concat-titles">Tel</div>
-            <div class="concat-value">+82-10-7568-9777</div>
-            <div class="concat-value">+86 17801076753</div>
+            <a class="concat-value" href="tel:+82-10-7568-9777">+82-10-7568-9777</a>
+            <a class="concat-value" href="tel:17801076753">+86 17801076753</a>
 
           </div>
         </div>
@@ -223,15 +317,21 @@
                     case 4 :
                         document.getElementById("about-us").scrollIntoView({block: "start", behavior: "smooth"});
                         break;
+                    case 8 :
+                         document.getElementById("flow").scrollIntoView({block: "start", behavior: "smooth"});
+                        break;
                     case 5:
                         this.$router.push('/subProject');
                         break;
                     case 6:
                         this.$router.push('/tour');
                         break;
+                    case 7:
+                        this.$router.push('/incubator');
+                        break;
                 }
             },
-            // 跳转到100优项列表
+            // 跳转到百币榜单列表
             goOptimal() {
                 this.$router.push('/optimal')
 
