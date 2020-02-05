@@ -16,12 +16,15 @@ $main-color:rgba(214,185,120,1);//主题色
   padding: 0px 0px 1px 0px;
   .head-content{
     width: $content-width;
+    min-width: $content-width;
     margin: 0 auto;
     @media only screen and (max-width: 768px) {
       width: $mobile-width;
+      min-width: $mobile-width;
     }
     .con-right{
       width: 80%;
+      min-width: 960px;
       @media only screen and (max-width: 768px) {
         display: none;
         font-size: 0.5rem;
@@ -41,7 +44,6 @@ $main-color:rgba(214,185,120,1);//主题色
     border-bottom: 4px solid rgba(27,28,30,0);
   }
   .item-check{
-    margin-left: 5%;
     height: 75px;
     cursor: pointer;
     color: $main-color;

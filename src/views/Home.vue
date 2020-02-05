@@ -75,32 +75,30 @@
           <div class="titles c-c-c">
             <div class="titles-con1">项目孵化营</div>
             <div class="l-1 r-l-c">孵化包</div>
-            <div class="r-l-c">Miss coin围绕百币榜单为项目提供以下十大服务
+            <div class="r-l-c">Miss coin
               <!--<span class="details" @click="jump(7)">详情</span>-->
             </div>
+            <div class="r-l-c">围绕百币榜单为项目提供以下十大服务</div>
           </div>
         </div>
         <div class="incubation-con r-s-a warp">
           <div v-for="(icb,index) in icbList" :key="index" class="con-img" @click="jump(icbIndex)">
             <img :src="require('../assets/img/incubator/' + icb.name)">
-            <div class="con-title">{{icb.title}}</div>
+            <a class="con-title">{{icb.title}}</a>
           </div>
         </div>
       </div>
       <div class="touring">
         <div id="touring"></div>
         <div class="content">
-          <div class="pre-left">
-            <div class="l-1 r-l-c">全球服务商招募</div>
+            <div class="l-1 r-l-c">Miss Coin全球服务商招募</div>
             <!--<div class="titles-con2">recruitment</div>-->
             <div class="l-2">
-              寻找行业内顶尖服务提供商，为Miss Coin旗下“百币榜单”内的项目提供专项收益服务。
-            </div>
-            <div class="enter" @click="jump(6)">全球服务商招募报名入口</div>
+              众人拾柴火焰高，“Miss Coin”提供一个平台，寻找区块链行业内顶尖专业服务商加入，为“Miss Coin”旗下“百币榜单”内的项目提供专项服务，助力项目快速发展。            </div>
+            <div class="enter" @click="jump(6)">关于全球服务商招募点击详情……</div>
             <div class="exa" @click="jump(7)">
-              优秀服务商案例点击详情
+              优秀服务商案例点击详情……
             </div>
-          </div>
         </div>
         <div class="pre-right"> </div>
       </div>
@@ -112,7 +110,7 @@
         <div class="flow-con">
           <div class="flow-con1">
             <div class="titles-con1 l-1">Mr.game 游戏中心</div>
-            <div>Mr.game游戏中心会开发自己的特色游戏供人玩耍；也欢迎更多游戏商家入驻Mr.game游戏中心，给用户带来更多玩法。</div>
+            <div>Mr.game利用Tokencan交易平台的客户管理系统和资产管理系统，解决了有关流量入口的两个问题，第一个是直接导入游戏，走腾讯当年的游戏发展之路，利用现有平台构建游戏中心。第二个是为其他的游戏平台提供充值通道，可以充值法币，也可以充值平台币或其他项目的Token。从而，同样可以解决消泡沫的问题和导流的问题。</div>
             <div class="fbi-content1">
                 <div class="fbi-warning1">
                   <div class="logo">Tokencan</div>
@@ -143,9 +141,9 @@
                 </div>
             </div>
           </div>
-          <div class="flow-con1">
+          <div class="flow-con2">
             <div class="titles-con1 l-1">支付</div>
-            <div>与各国法币对应的数字货币及其他支付系统对接，实现一个系统所有支付数字货币的打通，线下可使用。</div>
+            <div>AIPP是“Miss Coin”重点孵化的的项目之一，“Miss Coin”不仅孵化了AIPP，同时还让AIPP成为“Miss Coin”最重要的流量源头，这体现了“Miss Coin”创立的另外一个初衷——构建流量池。</div>
             <div class="fbi-content2">
               <div class="fbi-warning2">
                 <div class="bank">银行</div>
@@ -176,10 +174,12 @@
                 <div><span class="check-item"></span>与其他支付系统对接</div>
               </div>
             </div>
+            <div class="intro">AIPP的核心产品是它的预付费卡以及积分系统，其中预付费卡的结算系统基于信用卡系统原理开发，具备了支付、消费等几乎所有卡种的功能，另外，AIPP的积分系统拥有Korail（韩国铁道公司）的信用背书，购买积分的钱不是进入AIPP的账户，而是进入Korail的账户，保障了AIPP的积分具有刚性兑付属性。这两样产品可以应用的至少四类客户身上：可以帮助区块链公司消除Token的泡沫，可以帮助旅行社解决便捷消费问题，可以帮助合规的传销公司解决用积分返点的问题，可以帮助Esports的选手建立与粉丝的商业联系。同时，AIPP成为汇聚流量的优质工具。</div>
+
           </div>
-          <div class="flow-con1">
+          <div class="flow-con3">
             <div class="titles-con1 l-1">羊票</div>
-            <div>与普通群众生活相关，区块链融入百姓生活的真实落地案例。</div>
+            <div>羊票样板项目，这个项目巧妙的利用区块链技术解决了订单农业问题，同时巧妙的利用交易所解决了羊肉的流通问题。对于普通的老百姓来讲，他们不用了解“钱包”和“地址”这些专业概念，用微信扫码可以完成充值和提币的需要；对于一般的企业来讲，“羊票项目”的系统端程序是可以快速复制的，即插即用，企业可以仿照“羊票项目”的模式，非常方便的构建自己的区块链销售货物的应用。“羊票项目”可以为“Miss Coin”带来全新的客户流量。</div>
             <div class="fbi-content3">
               <div class="fbi-warning3">
                 <div class="logo">Tokencan</div>
@@ -216,12 +216,10 @@
       <div class="about-us">
         <div id="about-us"></div>
         <div class="titles c-c-c">
-          <div class="titles-con1" style="color: #D6B978">关于我们</div>
-          <!--<div class="titles-con2">About Miss Coin</div>-->
+          <div class="titles-con1">关于Miss Coin</div>
         </div>
         <div class="aboutUs-con">
-          一站式项目孵化营+流量池
-        </div>
+          “Miss Coin”是一个拥有大流量池的一站式项目孵化营社区。它集合了全球各地优秀、专业、有成功案例的服务商，为百币清单内的优质区块链项目提供其需要的所有服务，同时，“Miss Coin”通过构建一些典型的应用场景，将这些场景通过Tokencan交易所串联起来，从而构建了一个巨大的流量池。        </div>
       </div>
       <div class="road">
         <img src="../assets/img/intro/131580458483_.pic_hd.jpg">
@@ -240,8 +238,8 @@
       </div>
       <div class="concat-us">
         <div class="titles c-c-c">
-          <div class="titles-con1">联系我们</div>
-          <!--<div class="titles-con2">Contact us</div>-->
+          <div class="titles-con1">Miss Coin Committee</div>
+          <div class="about-comm">Miss Coin Committee是“Miss Coin”的执行组织，也是最高的决策机构，委员会成员具有推荐项目、团队的权力。工作委员会成员不超过21名，由优质的全球服务商共同组成。“Miss Coin”工作委员会将定期向委员会成员同步工作进展，并邀请委员会成员参与相关活动。</div>
         </div>
         <div class="concat-us-con r-s-a warp">
           <div class="c-s-con c-c-c">

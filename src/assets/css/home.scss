@@ -10,7 +10,6 @@ $b1:#f6f4e7;
   width: 100%;
   .content{
     width: 100%;
-    min-width: 1200px;
     @media only screen and (max-width: 768px) {
       min-width: 320px;
     }
@@ -23,9 +22,18 @@ $b1:#f6f4e7;
       padding: 50px 0px;
       position: relative;
     }
+    .preferred{
+      @media only screen and (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
     #preferred,#touring,#about-us,#concat-us,#incubation,#flow{
       height: 30px;
       position: absolute;top: -80px;
+    }
+    //banner背景色
+    .el-carousel__item{
+      background-color: #333;
     }
     //100优项--start---
     .preferred{
@@ -65,9 +73,10 @@ $b1:#f6f4e7;
           .l-1{
             font-size:1rem;
             font-weight:500;
-            color:$main-color;
+            color: #333;
             padding-left: 10px;
-            border-left: 4px solid $main-color;
+            border-left: 4px solid #333;
+            margin-left: -10px;
           }
           .l-2{
             font-size:0.875rem;
@@ -102,7 +111,8 @@ $b1:#f6f4e7;
           bottom: 0;
           right: 0;
           margin: auto;
-          width: 190px;
+          width: fit-content;
+          padding: 0 4px;
           height: 32px;
           line-height: 32px;
           background-color: #1B1C1E;
@@ -113,12 +123,6 @@ $b1:#f6f4e7;
           color: $main-color;
           margin-top: 60px;
         }
-      }
-      .pre-left{
-        width: 49%;
-        @media only screen and (max-width: 768px) {
-          width: 100%;
-        }
         .l-1,.l-2,.l-3{
           width: 90%;
           text-align: left;
@@ -127,13 +131,14 @@ $b1:#f6f4e7;
         .l-1{
           font-size:1rem;
           font-weight:500;
-          color:$main-color;
+          color:#333;
           padding-left: 10px;
-          border-left: 4px solid $main-color;
+          border-left: 4px solid #333;
         }
         .l-2{
-          font-size:0.875rem;
-          font-weight:600;
+          font-size: 14px;
+          font-weight:500;
+          padding-bottom: 20px;
         }
       }
       .touring-con{
@@ -184,9 +189,9 @@ $b1:#f6f4e7;
           .l-1{
             font-size: 1rem;
             font-weight: 500;
-            color: #d6b978;
+            color: #333;
             padding-left: 10px;
-            border-left: 4px solid #d6b978;
+            border-left: 4px solid #333;
             text-align: left;
             margin-bottom: 30px;
             width: 100%;
@@ -202,7 +207,10 @@ $b1:#f6f4e7;
         margin: 0 auto;
         .con-img{
           margin: 15px 0px;
-          min-width: 240px;
+          width: 240px;
+          @media only screen and (max-width: 768px) {
+            width: 43%;
+          }
           img{
             width: 50%;
           }
@@ -210,12 +218,14 @@ $b1:#f6f4e7;
         .con-title{
           margin:10px auto;
           width: 78%;
+          display: block;
+          color: red;
+          text-decoration: underline;
           @media only screen and (max-width: 768px) {
             width: $mobile-width;
           }
           font-size:1rem;
           font-weight:500;
-          color:rgba(27,28,30,1);
           line-height:22px;
         }
       }
@@ -228,7 +238,6 @@ $b1:#f6f4e7;
       background-color: $fbi-b1;
       padding-top: 50px;
       position: relative;
-      color: $main-color;
       .flow-con{
         width: $content-width;
         margin: auto;
@@ -240,25 +249,28 @@ $b1:#f6f4e7;
           width: 80%;
           flex-direction: column;
         }
-        .flow-con1{
+        .flow-con1,.flow-con2,.flow-con3{
           text-align: left;
           padding-bottom: 40px;
           width: 100%;
           @media only screen and (max-width:768px) {
             width: 100%;
+            font-weight: 400;
           }
-          .l-1{
-            font-size:1rem;
-            font-weight:500;
-            color:$main-color;
-            padding-left: 10px;
-            border-left: 4px solid $main-color;
-          }
-          .titles-con1 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 8px 0px;
-          }
+        }
+        .flow-con1{color: $w1}
+        .flow-con2{color: $w2}
+        .flow-con3{color: $w3}
+        .l-1{
+          font-size:1rem;
+          font-weight:500;
+          padding-left: 10px;
+          border-left: 4px solid;
+        }
+        .titles-con1 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin: 8px 0px;
         }
         img{
           width: 30%;
@@ -272,17 +284,17 @@ $b1:#f6f4e7;
       width: 100%;
       //background: url("../img/ho_bg_about.png") no-repeat;
       background-color: #fff;
+      color: #333;
       .aboutUs-con{
         @media only screen and (max-width: 768px) {
           width: $mobile-width;
           text-align: left;
         }
-        width:37% ;
+        width:70% ;
         margin: 0 auto;
         font-size:0.875rem;
         line-height: 1.5rem;
         font-weight:400;
-        color:rgba(214,185,120,1);
       }
       .pre-right{
         width: 100%;
@@ -342,9 +354,17 @@ $b1:#f6f4e7;
     }
     .concat-us{
       width: 100%;
-      background-color: #F5F5F5;
+      background-color: #f6f4e7;
       a,a:active,a:focus,a:link{
         text-decoration: none;
+      }
+      .about-comm{
+        width: 70%;
+        font-weight: 500;
+        font-size: 14px;
+        @media only screen and (max-width:768px){
+          width: $mobile-width;
+        }
       }
       .concat-us-con{
         width: $content-width;
@@ -392,7 +412,7 @@ $b1:#f6f4e7;
     .titles-con1{
       font-size:1.5rem;
       font-weight:600;
-      color:$main-color;
+      color:#333;
       margin:8px 0px;
     }
     .titles-con2{
@@ -433,21 +453,21 @@ $b1:#f6f4e7;
   margin-top: 40px;
   user-select: none;
   @media only screen and (max-width: 768px) {
-    transform: scale(.45);
-    margin: -100px auto -140px;
+    transform: scale(.5);
+    margin: -50px auto -100px;
   }
   .logo {
     position: absolute;
     left: 57%;
     top: 0;
-    color: $main-color;
-    border: 2px solid $main-color;
+    color: $w1;
+    border: 2px solid $w1;
     padding: 0 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     @media only screen and (max-width: 768px) {
-      left: 76%;
+      left: 77%;
     }
   }
   .wire {
@@ -594,8 +614,8 @@ $b1:#f6f4e7;
   margin-top: 60px;
   user-select: none;
   @media only screen and (max-width: 768px) {
-    transform: scale(.45);
-    margin: -100px auto -140px;
+    transform: scale(.6);
+    margin: -50px auto -70px;
   }
   .wire{
     background-color: $fbi-b1;
@@ -612,8 +632,8 @@ $b1:#f6f4e7;
       position: absolute;
       left: 58.5%;
       top: -30px;
-      color: $main-color;
-      border: 1px solid $main-color;
+      color: $w2;
+      border: 1px solid $w2;
       padding: 0 8px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -627,8 +647,8 @@ $b1:#f6f4e7;
       position: absolute;
       left: 57%;
       top: 0;
-      color: $main-color;
-      border: 1px solid $main-color;
+      color: $w2;
+      border: 1px solid $w2;
       padding: 0 8px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -644,7 +664,6 @@ $b1:#f6f4e7;
       padding-right: 60px;
       left: calc(50% - 170px);
       border-top: 2px solid $w2;
-      border-right: 2px solid $w2;
       height: 240px;
       .wire1{
         border: 2px solid $w2;
@@ -728,8 +747,8 @@ $b1:#f6f4e7;
       }
       .wire3{
         position: absolute;
-        right: -25px;
-        bottom: 0;
+        right: -80px;
+        top: -13px;
         border: 2px solid;
         border-radius: 5px;
       }
@@ -744,6 +763,11 @@ $b1:#f6f4e7;
     font-weight: normal;
     display: flex;
     flex-wrap: wrap;
+    @media only screen and (max-width: 768px) {
+      font-size: 24px;
+      width: 150%;
+      margin-left: -40px;
+    }
     div{
       display: flex;
       justify-content: flex-start;
@@ -772,6 +796,12 @@ $b1:#f6f4e7;
       box-shadow: 1px 2px 1px 2px $fbi-b1;
     }
   }
+  .intro {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 500;
+    padding: 60px 0;
+  }
 }
 //fbi-content3
 .fbi-content3{
@@ -782,8 +812,8 @@ $b1:#f6f4e7;
   margin-top: 60px;
   user-select: none;
   @media only screen and (max-width: 768px) {
-    transform: scale(.45);
-    margin: -100px auto -140px;
+    transform: scale(.6);
+    margin: -80px auto -100px;
   }
   .wire{
     background-color: $fbi-b1;
@@ -815,15 +845,15 @@ $b1:#f6f4e7;
       position: absolute;
       right: 56%;
       top: 0;
-      color: $main-color;
-      border: 1px solid $main-color;
+      color: $w3;
+      border: 1px solid $w3;
       padding: 0 8px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       border-radius: 10px;
       font-weight: 500;
       @media only screen and (max-width: 768px) {
-        right: 76%;
+        right: 65%;
       }
     }
     .wire-sub1{
@@ -832,7 +862,6 @@ $b1:#f6f4e7;
       padding-left: 60px;
       left: calc(50% - 170px);
       border-top: 2px solid $w3;
-      border-left: 2px solid $w3;
       height: 240px;
       .wire1{
         border: 2px solid $w3;
@@ -860,7 +889,7 @@ $b1:#f6f4e7;
         right: -72px;
         display: block;
         width: 70px;
-        height: 2px;
+        height: 4px;
         top: -6px;
         bottom: 0;
         margin: auto;
@@ -918,8 +947,8 @@ $b1:#f6f4e7;
       }
       .wire3{
         position: absolute;
-        left: -25px;
-        bottom: 0;
+        left: -60px;
+        top: -13px;
         border: 2px solid;
         border-radius: 5px;
         padding: 1px 3px;
@@ -935,6 +964,11 @@ $b1:#f6f4e7;
     font-weight: normal;
     display: flex;
     flex-wrap: wrap;
+    @media only screen and (max-width: 768px) {
+      font-size: 24px;
+      width: 200%;
+      margin-left: -40px;
+    }
     div{
       padding: 0 10px;
       display: flex;

@@ -1,4 +1,4 @@
 export const carouseList=[
-  {name:'ho_bg_banner.jpg'},
-  {name:'ho_bg_banner.jpg'},
+  {name:'banner1.jpg'},
+  {name:'banner2.jpg'},
 ]
