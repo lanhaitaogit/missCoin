@@ -170,7 +170,7 @@
                 <div><span class="check-item"></span>与韩国法定数字货币对接</div>
                 <div><span class="check-item"></span>与中国法定数字DCEP对接</div>
                 <div><span class="check-item"></span>与Libra对接</div>
-                <div><span class="check-item"></span>与各种主链及侧脸链实现跨链支付对接</div>
+                <div><span class="check-item"></span>与各种主链及侧链实现跨链支付对接</div>
                 <div><span class="check-item"></span>与其他支付系统对接</div>
               </div>
             </div>
