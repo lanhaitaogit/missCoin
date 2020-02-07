@@ -1,8 +1,8 @@
 <style scoped src="../assets/css/foot.scss" lang="scss"></style>
 <template>
-    <div class="pc-footer c-c-c">
+    <div class="pc-footer c-c-c" style="display: none">
       <div class="info">
-        <span>Copyright</span>&copy;<span>贵州引力波科技有限公司</span>
+        <span>Copyright</span>&copy;<span>Miss Coin</span>
       </div>
     </div>
 </template>
