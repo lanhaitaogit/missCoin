@@ -13,7 +13,7 @@
     <div class="subProject">
         <pc-head @jump="jump" :index="index"></pc-head>
         <div class="content c-c-c">
-           敬请期待
+           {{$t('incubation.coming_soon')}}
         </div>
         <concat></concat>
         <pc-foot></pc-foot>
