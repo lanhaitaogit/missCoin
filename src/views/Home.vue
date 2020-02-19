@@ -113,30 +113,30 @@
             <div>{{$t('flow.intro_game')}}</div>
             <div class="fbi-content1">
                 <div class="fbi-warning1">
-                  <div class="logo">Tokencan</div>
-                    <span class="titles">Mr.game游戏中心</span>
+                  <div class="logo">{{$t('icon.T')}}</div>
+                    <span class="titles">{{$t('flow.title')}}</span>
                     <div class="wire-con1 wire">
                       <div  class="wire-sub1">
-                        <span class="wire1" style="margin-left: 18px;">游戏消费</span>
-                        <span class="wire1" style="margin-right: -10px;">游戏充值通道</span>
+                        <span class="wire1" style="margin-left: 18px;">{{$t('flow.game_spending')}}</span>
+                        <span class="wire1" style="margin-right: -10px;">{{$t('flow.game_recharge')}}</span>
                       </div>
                     </div>
                   <div class="wire-con2">
                     <div class="wore-sub2 wire">
-                      <span class="wire2" style="margin-left: -40px;">游戏上架</span>
-                      <span class="wire2" style="margin-right: -30px;">泡沫消除</span>
+                      <span class="wire2" style="margin-left: -40px;">{{$t('flow.game_pro')}}</span>
+                      <span class="wire2" style="margin-right: -30px;">{{$t('flow.game_def')}}</span>
                     </div>
                     <div class="wore-sub2 wire">
-                      <span class="wire2" style="margin-left: -52px;">游戏平台币充值</span>
-                      <span class="wire2" style="margin-right: -40px;">法币充值</span>
+                      <span class="wire2" style="margin-left: -52px;">{{$t('flow.game_platform_recharge')}}</span>
+                      <span class="wire2" style="margin-right: -40px;">{{$t('flow.game_fiat')}}</span>
                     </div>
                   </div>
                   <div class="wire-sub3">
-                    <div class="wire3 wire">外部流量引入</div>
+                    <div class="wire3 wire">{{$t('flow.game_ex')}}</div>
                   </div>
                   <div class="wire-con3">
-                    <div class="wire4 wire" style="margin-left: -40px;">渠道分发</div>
-                    <div class="wire4 wire" style="margin-right: -40px;">游戏平台</div>
+                    <div class="wire4 wire" style="margin-left: -40px;">{{$t('flow.game_distribution')}}</div>
+                    <div class="wire4 wire" style="margin-right: -40px;">{{$t('flow.game_platform')}}</div>
                   </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                       <span class="wire2 wire" style="">{{$t('flow.detail5_gt')}}</span>
                     </div>
                   </div>
-                  <div class="wire3 wire">免费吃羊肉</div>
+                  <div class="wire3 wire">{{$t('flow.detail6_gt')}}</div>
                 </div>
               </div>
               <div class="list">
@@ -333,6 +333,7 @@
                 this.$router.push('/optimal')
 
             }
-        }
-    }
+        },
+    };
+
 </script>

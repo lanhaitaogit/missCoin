@@ -31,6 +31,15 @@ module.exports = {
         intro_game:'Mr.game利用Tokencan交易平台的客户管理系统和资产管理系统，解决了有关流量入口的两个问题，第一个是直接导入游戏，' +
             '走腾讯当年的游戏发展之路，利用现有平台构建游戏中心。第二个是为其他的游戏平台提供充值通道，可以充值法币，也可以充值平台币' +
             '或其他项目的Token。从而，同样可以解决消泡沫的问题和导流的问题。',
+        game_spending:'游戏消费',//游戏消费
+        game_recharge:'游戏充值通道',//游戏充值通道
+        game_pro:'游戏上架',//游戏上架
+        game_def:'泡沫消除',//泡沫消除
+        game_platform_recharge:'游戏平台币充值',//游戏平台币充值
+        game_fiat:'法币充值',//法币充值
+        game_ex:'外部流量引入',//外部流量引入
+        game_distribution:'渠道分发',//渠道分发
+        game_platform:'游戏平台',//游戏平台
         intro_payment:'AIPP是“Miss Coin”重点孵化的的项目之一，“Miss Coin”不仅孵化了AIPP，同时还让AIPP成为“Miss Coin”最重要的流量' +
             '源头，这体现了“Miss Coin”创立的另外一个初衷——构建流量池。',
         title_payment:'支付',
@@ -63,6 +72,7 @@ module.exports = {
         detail3_gt:'即插即用',
         detail4_gt:'合规合法',
         detail5_gt:'扫码转账',
+        detail6_gt:'免费吃羊肉',
         s1:'羊票是养羊的免费红利',
         s2:'一克羊肉对应一枚羊票（NRC）',
         s3:'认购一只羊一个月可分得750克羊肉',
@@ -97,5 +107,17 @@ module.exports = {
         rights2:'可获得Miss Coin旗下孵化项目服务的优先推荐机会',
         rights3:'可进入Miss Coin的签约服务商列表，对接充沛项目方选项',
     },
+    icb:{
+        t1:'区块链融资服务',
+        t2:'交易服务',
+        t3:'量化服务',
+        t4:'公关服务',
+        t5:'媒体服务',
+        t6:'社群服务',
+        t7:'开发服务',
+        t8:'人才服务',
+        t9:'合规服务',
+        t10:'嘉年华大会',
+    }
 
 }

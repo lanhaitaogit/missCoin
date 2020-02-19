@@ -14,6 +14,18 @@
           <div class="item c-c-c" :class="[indexTab=== 8?'item-check':'item']" @click="jump(8)">{{$t('nav.paw')}}</div>
           <div class="item c-c-c" :class="[indexTab=== 4?'item-check':'item']" @click="jump(4)">{{$t('nav.about')}}</div>
           <div class="item c-c-c" :class="[indexTab=== 5?'item-check':'item']" @click="jump(5)">{{$t('nav.project')}}</div>
+          <div class="item lang c-c-c">
+            <el-dropdown>
+              <span class="el-dropdown-link">
+                <i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item @click.native="toggleLang('zh')" :disabled="$i18n.locale === 'zh'">中文</el-dropdown-item>
+                <el-dropdown-item @click.native="toggleLang('en')" :disabled="$i18n.locale === 'en'">English</el-dropdown-item>
+                <el-dropdown-item @click.native="toggleLang('ko')" :disabled="$i18n.locale === 'ko'">한글</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
         </div>
         <div class="showDraw c-c-c" @click="openDraw()"><i class="el-icon-s-fold"></i></div>
       </div>
@@ -61,7 +73,35 @@
             },
             closeDia() {
                 this.drawer = false;
-            }
+            },
+          toggleLang(lang) {
+              switch (lang) {
+                case 'zh':
+                  localStorage.setItem('locale', 'zh_CN');
+                  this.$i18n.locale = localStorage.getItem('locale');
+                  // this.$message({
+                  //   message: '切换为中文！',
+                  //   type: 'success'
+                  // });
+                  break;
+                case 'en':
+                  localStorage.setItem('locale', 'en_US');
+                  this.$i18n.locale = localStorage.getItem('locale');
+                  // this.$message({
+                  //   message: 'Switch to English!',
+                  //   type: 'success'
+                  // });
+                  break;
+                case 'ko':
+                  localStorage.setItem('locale', 'ko_KR');
+                  this.$i18n.locale = localStorage.getItem('locale');
+                  // this.$message({
+                  //   message: '한글로 전환',
+                  //   type: 'success'
+                  // });
+                  break;
+              }
+          },
         },
     }
 </script>
