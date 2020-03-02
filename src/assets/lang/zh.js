@@ -1,4 +1,5 @@
 module.exports = {
+    lang:'ZH',
     nav:{
         home : '首页',
         board : '百币榜单',

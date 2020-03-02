@@ -17,6 +17,7 @@
           <div class="item lang c-c-c">
             <el-dropdown>
               <span class="el-dropdown-link">
+                {{$t('lang')}}
                 <i class="el-icon-arrow-down el-icon--right"></i>
               </span>
               <el-dropdown-menu slot="dropdown">
@@ -32,9 +33,19 @@
     </div>
     <!--手机导航侧面弹出-->
     <div class="head-mobile r-r-l" @click.stop="closeDia()" v-show="drawer">
+      <transition class="slide-fade">
+        <div class="content switch-lang" v-show="drawerLang">
+          <div class="c-c-c item" @click.stop="toggleLang('zh')" :disabled="$i18n.locale === 'zh'">中文</div>
+          <div class="c-c-c item" @click.stop="toggleLang('en')" :disabled="$i18n.locale === 'en'">English</div>
+          <div class="c-c-c item" @click.stop="toggleLang('ko')" :disabled="$i18n.locale === 'ko'">한글</div>
+          <div></div>
+          <div></div>
+        </div>
+      </transition>
       <transition name="slide-fade">
         <div class="content" v-show="drawer">
           <div class="r-r-l closedia"><i class="el-icon-circle-close" @click.stop="closeDia()"></i></div>
+          <div class="c-c-c" @click.stop="langDrawer()">Language</div>
           <div @click.stop="jump(0)" class="c-c-c">{{$t('nav.home')}}</div>
           <div @click.stop="jump(1)" class="c-c-c">{{$t('nav.board')}}</div>
           <div @click.stop="jump(3)" class="c-c-c">{{$t('nav.incubate')}}</div>
@@ -56,11 +67,12 @@
             return {
                 indexTab: 0,
                 drawer: false,
+                drawerLang: false,
                 direction: 'rtl',
             }
         },
         created() {
-            this.indexTab = this.index
+            this.indexTab = this.index;
         },
         methods: {
             jump(type) {
@@ -70,14 +82,18 @@
             // 打开左侧面板
             openDraw() {
                 this.drawer = true;
+              this.drawerLang = false;
             },
             closeDia() {
                 this.drawer = false;
             },
+            langDrawer() {
+                this.drawerLang = true;
+            },
           toggleLang(lang) {
               switch (lang) {
                 case 'zh':
-                  localStorage.setItem('locale', 'zh_CN');
+                  localStorage.setItem('locale', 'ZH');
                   this.$i18n.locale = localStorage.getItem('locale');
                   // this.$message({
                   //   message: '切换为中文！',
@@ -85,7 +101,7 @@
                   // });
                   break;
                 case 'en':
-                  localStorage.setItem('locale', 'en_US');
+                  localStorage.setItem('locale', 'EN');
                   this.$i18n.locale = localStorage.getItem('locale');
                   // this.$message({
                   //   message: 'Switch to English!',
@@ -93,7 +109,7 @@
                   // });
                   break;
                 case 'ko':
-                  localStorage.setItem('locale', 'ko_KR');
+                  localStorage.setItem('locale', 'KR');
                   this.$i18n.locale = localStorage.getItem('locale');
                   // this.$message({
                   //   message: '한글로 전환',
@@ -101,6 +117,7 @@
                   // });
                   break;
               }
+              window.location.reload();
           },
         },
     }

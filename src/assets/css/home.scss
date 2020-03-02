@@ -46,6 +46,9 @@ $b1:#f6f4e7;
         width: 100%;
         .pre-left,.pre-right{
           height: 300px;
+          @media only screen and (max-width: 768px) {
+            height: auto;
+          }
         }
         .pre-right{
           width: 49%;
@@ -56,7 +59,8 @@ $b1:#f6f4e7;
             height: 94%;
             margin: auto;
             @media only screen and (max-width: 768px) {
-              height: 80%;
+              width: 80%;
+              height: auto;
             }
           }
         }
@@ -528,9 +532,9 @@ $b1:#f6f4e7;
     z-index: 1;
   }
   .wire-con2{
-    width: 472px;
-    margin: -2px auto 34px;
-    height: 19px;
+    width: 410px;
+    margin: -2px auto 54px;
+    height: 1px;
     display: flex;
     justify-content: space-between;
     @media only screen and (max-width: 768px) {
@@ -539,7 +543,7 @@ $b1:#f6f4e7;
       margin-left: calc(-50% + 97px);
     }
     .wore-sub2{
-      width: 185px;
+      width: 151px;
       border: 2px solid;
       border-bottom: none;
       display: flex;
@@ -551,10 +555,12 @@ $b1:#f6f4e7;
       border: 2px solid;
       padding: 6px 9px;
       height: 20px;
-      line-height: 20px;
+      line-height: normal;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       border-radius: 9px;
+      background-color: $fbi-b1;
+      z-index: 2;
     }
   }
   .wire-sub3{
@@ -587,6 +593,58 @@ $b1:#f6f4e7;
     margin: auto;
     z-index: 2;
     background-color: $w1;
+  }
+}
+//英文样式补丁
+.fbi-content1.EN {
+  .logo {
+    left:59.5%;
+    @media only screen and (max-width: 768px) {
+      left: 87%;
+    }
+  }
+  .wire-con2{
+    height: 9px;
+    @media only screen and (max-width: 768px){
+      width: 410px;
+    }
+  }
+  .wore-sub2{
+    @media only screen and (max-width: 768px){
+      width: 40%;
+    }
+    .wire2{
+      height: 40px;
+      line-height: 20px;
+      padding: 0 2px;
+    }
+  }
+  .wore-sub2:first-of-type{
+    .wire2 {
+      line-height: 40px;
+      @media only screen and (max-width: 768px){
+        line-height: 20px;
+      }
+    }
+  }
+  .wire-sub3{
+    @media only screen and (max-width: 768px){
+      width: 74px;
+    }
+    .wire3{
+      height: 40px;
+      line-height: 20px;
+      @media only screen and (max-width: 768px){
+        width: 150%;
+        left: -25%;
+      }
+    }
+  }
+  .wire-con3{
+    .wire4{
+      height: 40px;
+      line-height: 20px;
+    }
   }
 }
 .wire-con3{
@@ -700,12 +758,12 @@ $b1:#f6f4e7;
       .titles:before{
         content: "";
         position: absolute;
-        left: -52px;
+        left: -82px;
         top: -5px;
         bottom: 0;
         margin: auto;
-        width: 50px;
-        height: 10px;
+        width: 80px;
+        height: 100%;
         background-color: $b1;
         z-index: 10086;
       }
@@ -804,6 +862,39 @@ $b1:#f6f4e7;
     padding: 60px 0;
   }
 }
+//英文样式补丁
+.fbi-content2.EN{
+  .fbi-warning2{
+    .logo{
+      top: -15px;
+    }
+    .bank{
+      top: -45px;
+    }
+    .wire-sub1{
+      .titles{
+        @media only screen and (max-width: 768px) {
+          width: 200px;
+        }
+      }
+      .wire3{
+        right: -145px;
+        @media only screen and (max-width: 768px) {
+          right: -80px;
+        }
+      }
+      .wire-con1{
+        width: 220px;
+      }
+      .wire-con2{
+        .wire-sub3{
+          width: 140%;
+          margin-left: -21%;
+        }
+      }
+    }
+  }
+}
 //fbi-content3
 .fbi-content3{
   position: relative;
@@ -845,7 +936,7 @@ $b1:#f6f4e7;
     .logo {
       position: absolute;
       right: 53.6%;
-      top: 0;
+      top: -15px;
       color: $w3;
       border: 1px solid $w3;
       padding: 0 8px;
@@ -968,7 +1059,7 @@ $b1:#f6f4e7;
     @media only screen and (max-width: 768px) {
       font-size: 24px;
       width: 200%;
-      margin-left: -40px;
+      margin-left: -50%;
     }
     div{
       padding: 0 10px;
@@ -996,6 +1087,33 @@ $b1:#f6f4e7;
       right: -3px;
       top: -1px;
       box-shadow: 1px 2px 1px 2px $fbi-b1;
+    }
+  }
+}
+//英文样式补丁
+.fbi-content3.EN{
+  @media only screen and (max-width: 768px){
+    transform: scale(0.5);
+  }
+  .fbi-warning3{
+    .wire-sub1{
+      .wire3{
+        left: -150px;
+      }
+      .wire-con1{
+        width: 275px;
+        height: 110px;
+      }
+      .wire-con2{
+        .wire-sub3{
+          width: 150%;
+          margin-left: -26%;
+        }
+      }
+      .wire-con2{
+        width: 400px;
+        margin-left: -50px;
+      }
     }
   }
 }

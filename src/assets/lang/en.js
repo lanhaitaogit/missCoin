@@ -1,4 +1,5 @@
 module.exports = {
+    lang:'EN',
     nav:{
         home : 'Homepage',
         board : 'Ranking List',
@@ -49,7 +50,7 @@ module.exports = {
         intro_payment:'AIPP is one of the key incubation projects of "Miss coin", which not only incubates AIPP, but also ' +
             'makes AIPP the most important traffic source of "Miss coin", which embodies another original intention of' +
             ' "Miss coin" - to build a traffic pool.',
-        title_payment:'支付',
+        title_payment:'Payment',
         sub_title_payment:'AIPP payment and settlement system',
         card_payment:'Stored value card',
         point_payment:'ARA Points',

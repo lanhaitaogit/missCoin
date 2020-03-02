@@ -1,4 +1,5 @@
 module.exports = {
+    lang:'KR',
     nav:{
         home : '메인 페이지',
         board : '백코인 베스트 리스트',
@@ -44,7 +45,7 @@ module.exports = {
         game_platform:'게임 플랫폼',//游戏平台
         intro_payment:'AIPP는 “Miss Coin”의 핵심 인큐베이터 프로젝트이다. “Miss Coin”는 AIPP를 육성할 뿐만 아니라 AIPP는 “Miss Coin”의 ' +
             '가장 중요한 트래픽 근원이다. 이는 “Miss Coin”설립한 또 다른 지향점이고 구축한 트래픽풀이다. 아래에서 언급한 다른 2가지 또한 같은 논리이다.',
-        title_payment:'支付',
+        title_payment:'지불하다',
         sub_title_payment:'AIPP 결제 시스템.',
         card_payment:'선불카드',//储值卡
         point_payment:'AI 포인트',//ARA积分
@@ -87,7 +88,7 @@ module.exports = {
         T:'Tokencan',
     },
     about:{
-        title:'关于Miss Coin',
+        title:'About Miss Coin',
         detail:'“Miss Coin”은 빅 트래픽풀을 보유한 원스톱 프로젝트 인큐베이터 커뮤니티이다. 이는 전세계 각국의 우수하고 전문적이며 성공사례을 보유한 ' +
             '서비스업체를 집결하였다. 백코인 목록에 있는 우수한 블록체인 프로젝트에 필요한 모든 서비스를 제공하며, “Miss Coin”은 전형적인 활용공간 구축을 ' +
             '통해 Tokencan 거래소와 연결하여 거대한 트래픽풀을 구축하였다.',

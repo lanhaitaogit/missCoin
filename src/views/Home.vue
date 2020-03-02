@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="pre-right">
-            <img src="../assets/img/perfect-img.png">
+            <img :src="require('../assets/img/perfect-' + lang + '.jpeg')">
           </div>
         </div>
       </div>
@@ -111,10 +111,10 @@
           <div class="flow-con1">
             <div class="titles-con1 l-1">{{$t('flow.title_game')}}</div>
             <div>{{$t('flow.intro_game')}}</div>
-            <div class="fbi-content1">
+            <div class="fbi-content1" :class="lang">
                 <div class="fbi-warning1">
                   <div class="logo">{{$t('icon.T')}}</div>
-                    <span class="titles">{{$t('flow.title')}}</span>
+                    <span class="titles">{{$t('flow.title_game')}}</span>
                     <div class="wire-con1 wire">
                       <div  class="wire-sub1">
                         <span class="wire1" style="margin-left: 18px;">{{$t('flow.game_spending')}}</span>
@@ -144,7 +144,7 @@
           <div class="flow-con2">
             <div class="titles-con1 l-1">{{$t('flow.title_payment')}}</div>
             <div>{{$t('flow.intro_payment')}}</div>
-            <div class="fbi-content2">
+            <div class="fbi-content2" :class="lang">
               <div class="fbi-warning2">
                 <div class="bank">{{$t('icon.bank')}}</div>
                 <div class="logo">{{$t('icon.T')}}</div>
@@ -180,7 +180,7 @@
           <div class="flow-con3">
             <div class="titles-con1 l-1">{{$t('flow.title_gt')}}</div>
             <div>{{$t('flow.intro_gt')}}</div>
-            <div class="fbi-content3">
+            <div class="fbi-content3" :class="lang">
               <div class="fbi-warning3">
                 <div class="logo">{{$t('icon.T')}}</div>
                 <div class="wire-sub1">
@@ -221,7 +221,7 @@
         <div class="aboutUs-con">{{$t('about.detail')}}</div>
       </div>
       <div class="road">
-        <img src="../assets/img/intro/131580458483_.pic_hd.jpg">
+        <img :src="require('../assets/img/intro/structure-' + lang + '.png')">
       </div>
       <div class="concat" id="concat" style="display: none">
         <div class="split">
@@ -281,10 +281,15 @@
                 sponsorList: sponsorList,
                 carouseList: carouseList,
                 index: this.$route.query.type ? this.$route.query.type : 0,
+                lang:'ZH',
             }
         },
         created() {
             this.index = this.$route.query.type ? this.$route.query.type : 0;
+            const locale = localStorage.getItem('locale');
+            if (locale) {
+              this.lang = locale;
+            }
         },
         mounted() {
             this.$refs.head.indexTab=parseInt(this.index);
