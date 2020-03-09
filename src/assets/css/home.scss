@@ -109,7 +109,6 @@ $b1:#f6f4e7;
         .enter{
           color: #d6b978;
           cursor: pointer;
-          position: absolute;
           top: 80px;
           left: 0;
           bottom: 0;
@@ -120,6 +119,7 @@ $b1:#f6f4e7;
           height: 32px;
           line-height: 32px;
           background-color: #1B1C1E;
+          font-size: 14px;
         }
         .exa{
           text-align: left;

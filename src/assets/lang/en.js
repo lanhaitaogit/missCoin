@@ -19,7 +19,7 @@ module.exports = {
         main:'Project Incubators',
         title:'Incubator package',
         intro:'Miss coin provides the following ten services for the projects around the Ranking List',
-        coming_soon:'敬请期待',
+        coming_soon:'Stay tuned',
     },
     touring:{
         title:'Worldwide Service Providers  Wanted',
@@ -115,16 +115,16 @@ module.exports = {
             'activities.',
     },
     tour:{
-        earn:'服务商将得到：',
-        earn1:'客源锁定：参与Miss Coin榜单项目的高效对接，定向服务，收款保护',
-        earn2:'海外资源：获得韩国、日本、东南亚及欧美市场资源，企业资源，政治资源的深度对接',
-        earn3:'年度荣誉：提升专业服务评级认证，并参与一年一度的国际嘉年华颁奖',
-        ISP1:'A+级：指定服务商',
-        ISP2:'A级：推荐服务商',
-        ISP3:'B级：专业服务商',
-        rights1:'可获得Miss Coin旗下孵化优质项目的指定服务权益',
-        rights2:'可获得Miss Coin旗下孵化项目服务的优先推荐机会',
-        rights3:'可进入Miss Coin的签约服务商列表，对接充沛项目方选项',
+        earn:'서비스 사업자 의 이득：',
+        earn1:'고객 소스 잠금：Miss Coin미쓰코인 차트에 참여 하여 효율 적 인 프로젝트 연계 타겟 서비스, 수금 보호',
+        earn2:'해외 자원：중국·일본·동남아에서 유럽과 미주 시장 까지의 현지 자원 기업 자원 접촉',
+        earn3:'연도명예：프로페셔널 서비스 레벨 인증을 향상하고 1년에 한 번 열리는 국제 카니발 시상 참여',
+        ISP1:'A+급：지정된 서비스 프로바이더',
+        ISP2:'A급：추천 서비스 프로바이더',
+        ISP3:'B급：전문 서비스 업체',
+        rights1:'Miss Coin 산하에 부화한 양질의 항목에 대한 지정 서비스 권익을 획득할 수 있습니다.',
+        rights2:'Miss Coin 산하의 부화 프로그램 서비스를 받을 수 있는 우선 추천 기회',
+        rights3:'Can enter Miss Coin'+"'"+'s list of contracted service providers and connect with rich project options',
     },
     icb:{
         t1:'Finance services',
@@ -138,5 +138,6 @@ module.exports = {
         t9:'Compliance services',
         t10:'Carnival services',
     }
+
 
 }
