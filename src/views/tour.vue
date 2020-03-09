@@ -1,12 +1,14 @@
 <style scoped>
   .content{
-    height: calc(100vh - 120px);
+    height: calc(100vh - 60px);
   }
     .serves {
         margin-top: 40px;
     }
     .serves>div {
         margin: 0 20px;
+        max-width: 25%;
+        line-height: 1.75;
     }
 </style>
 <template>
@@ -27,7 +29,6 @@
         </div>
       </div>
       <concat></concat>
-      <pc-foot></pc-foot>
     </div>
 </template>
 

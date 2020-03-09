@@ -1,6 +1,6 @@
 <style scoped>
     .content{
-        height: calc(100vh - 120px);
+        height: calc(100vh - 60px);
     }
     .serves {
         margin-top: 40px;
