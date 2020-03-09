@@ -137,7 +137,8 @@ module.exports = {
         t8:'HR services',
         t9:'Compliance services',
         t10:'Carnival services',
-    }
+    },
+    concat_us:'Concat Us',
 
 
 }

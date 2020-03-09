@@ -2,7 +2,7 @@
 <template>
     <div class="pc-concat c-c-c">
       <div class="info r-s-a">
-        <div class="text-concat">联系我们</div>
+        <div class="text-concat">{{$t('concat_us')}}</div>
         <div>
           Telegram：+82-10-7568-9777
         </div>

@@ -27,4 +27,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-scp -r /Users/apple/WebstormProjects/missCoinS/dist root@47.56.159.247:/var/www/html/misscoin/

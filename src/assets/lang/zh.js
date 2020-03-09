@@ -120,6 +120,6 @@ module.exports = {
         t9:'合规服务',
         t10:'嘉年华大会',
     },
-    coming_soon: '敬请期待',
+    concat_us:'联系我们',
 
 }
